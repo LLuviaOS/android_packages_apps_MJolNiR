@@ -31,9 +31,10 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-import com.lluvia.tormenta.statusbar.ClockCategory;
 import com.lluvia.tormenta.statusbar.BatteryCategory;
+import com.lluvia.tormenta.statusbar.ClockCategory;
 import com.lluvia.tormenta.statusbar.IconsCategory;
+import com.lluvia.tormenta.statusbar.TrafficCategory;
 import com.lluvia.tormenta.PagerSlidingTabStrip;
 
 public class StatusbarHolder extends SettingsPreferenceFragment {
@@ -88,6 +89,7 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
             frags[0] = new ClockCategory();
             frags[1] = new BatteryCategory();
             frags[2] = new IconsCategory();
+            frags[3] = new TrafficCategory();
         }
 
         @Override
@@ -111,7 +113,8 @@ public class StatusbarHolder extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.clock_category),
                     getString(R.string.battery_category),
-                    getString(R.string.icon_category)};
+                    getString(R.string.icon_category),
+                    getString(R.string.traffic_category)};
         return titleString;
     }
 }

@@ -35,11 +35,13 @@ import com.android.internal.util.lluvia.LLuviaUtils;
 public class StockRecentCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String RECENTS_COMPONENT_TYPE = "recents_component";
+    private static final String RECENTS_TYPE = "recents_layout_style";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
     private ListPreference mRecentsClearAllLocation;
     private ListPreference mRecentsComponentType;
-    private static final String RECENTS_COMPONENT_TYPE = "recents_component";
+    private ListPreference mRecentsType;
 
     @Override
     public int getMetricsCategory() {
@@ -70,6 +72,13 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements
         mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
         mRecentsComponentType.setOnPreferenceChangeListener(this);
 
+        // oreo recents type
+        mRecentsType = (ListPreference) findPreference(RECENTS_TYPE);
+        int style = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_LAYOUT_STYLE, 0, UserHandle.USER_CURRENT);
+        mRecentsType.setValue(String.valueOf(style));
+        mRecentsType.setSummary(mRecentsType.getEntry());
+        mRecentsType.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -97,6 +106,14 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements
                Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
             }
+            LLuviaUtils.showSystemUiRestartDialog(getContext());
+        return true;
+        } else if (preference == mRecentsType) {
+            int style = Integer.valueOf((String) objValue);
+            int index = mRecentsType.findIndexOfValue((String) objValue);
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_LAYOUT_STYLE, style, UserHandle.USER_CURRENT);
+            mRecentsType.setSummary(mRecentsType.getEntries()[index]);
             LLuviaUtils.showSystemUiRestartDialog(getContext());
         return true;
         }

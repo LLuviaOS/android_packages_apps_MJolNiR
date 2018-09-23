@@ -31,6 +31,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
+import com.android.internal.util.lluvia.LLuviaUtils;
 
 import com.android.settings.R;
 
@@ -42,6 +43,10 @@ import com.lluvia.tormenta.preference.ActionFragment;
 import com.lluvia.tormenta.preference.CustomSeekBarPreference;
 
 public class ButtonSettings extends ActionFragment implements OnPreferenceChangeListener {
+
+    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
+
+    private SwitchPreference mEnableNavBar;
 
     //Keys
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
@@ -82,6 +87,12 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
+        boolean showNavBarDefault = PixysUtils.deviceSupportNavigationBar(getActivity());
+        boolean showNavBar = Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1 : 0) == 1;
+        mEnableNavBar.setChecked(showNavBar);
 
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         final PreferenceCategory hwkeyCat = (PreferenceCategory) prefScreen
@@ -233,4 +244,14 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         return MetricsProto.MetricsEvent.LLUVIA_SETTINGS;
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mEnableNavBar) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_SHOW, checked ? 1:0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
 }

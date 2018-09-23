@@ -20,6 +20,12 @@
         android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+     <SwitchPreference
+        android:key="navigation_bar_show"
+        android:title="@string/navbar_toggle_title"
+        android:summary="@string/navbar_toggle_summary"
+        android:persistent="true" />
+
     <PreferenceCategory
         android:key="hardware_keys"
         android:title="@string/hardware_keys_category" >

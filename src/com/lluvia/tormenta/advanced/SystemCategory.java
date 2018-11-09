@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lluvia.tormenta.statusbar;
+package com.lluvia.tormenta.advanced;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
@@ -24,7 +24,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class BatteryCategory extends SettingsPreferenceFragment implements
+public class SystemCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
@@ -36,7 +36,8 @@ public class BatteryCategory extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.battery);
+        addPreferencesFromResource(R.xml.system);
+
     }
 
     @Override

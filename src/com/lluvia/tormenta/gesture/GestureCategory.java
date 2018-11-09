@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Android Open Source Illusion Project
+ * Copyright (C) 2017 Android Open Source Illusion Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,36 +14,32 @@
  * limitations under the License.
  */
 
-package com.lluvia.tormenta.advanced;
+package com.lluvia.tormenta.gesture;
 
-import android.app.ActivityManager;
-import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
-import android.preference.PreferenceCategory;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
-import com.android.internal.logging.MetricsProto.MetricsEvent;
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-public class GestureanywhereCategory extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class GestureCategory extends SettingsPreferenceFragment implements
+        OnPreferenceChangeListener {
+    private static final String TAG = "GestureCategory";
+
 
     @Override
-    protected int getMetricsCategory() {
+    public int getMetricsCategory() {
         return MetricsEvent.TORMENTA;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.lluvia_gestureanywhere);
+        addPreferencesFromResource(R.xml.gesture);
 
     }
 

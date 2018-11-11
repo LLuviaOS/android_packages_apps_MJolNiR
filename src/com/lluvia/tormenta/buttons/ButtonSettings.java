@@ -82,14 +82,14 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.lluvia_settings_button);
+        addPreferencesFromResource(R.xml.hardwarebuttons);
 
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mEnableNavBar = (SwitchPreference) prefScreen.findPreference(KEYS_SHOW_NAVBAR_KEY);
-        boolean showNavBarDefault = PixysUtils.deviceSupportNavigationBar(getActivity());
+        boolean showNavBarDefault = LLuviaUtils.deviceSupportNavigationBar(getActivity());
         boolean showNavBar = Settings.System.getInt(resolver,
                 Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1 : 0) == 1;
         mEnableNavBar.setChecked(showNavBar);

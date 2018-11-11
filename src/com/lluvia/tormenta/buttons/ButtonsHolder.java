@@ -109,7 +109,7 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
         String titleString[];
         titleString = new String[]{
                     getString(R.string.powermenu_category),
-                    getString(R.string.volume_category)};
+                    getString(R.string.volume_category),
 		    getString(R.string.hardware_keys_category)};
         return titleString;
     }

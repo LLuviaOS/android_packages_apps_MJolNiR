@@ -23,12 +23,12 @@
        android:summary="@string/statusbar_bar_summary" 
        android:icon="@drawable/ic_tormenta_status" />
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
        android:key="quicksettings"
        android:fragment="com.lluvia.tormenta.qssettings.QsSettingsHolder"
        android:title="@string/quicksettings_title" 
        android:summary="@string/quicksettings_summary"
-       android:icon="@drawable/ic_tormenta_qs" />
+       android:icon="@drawable/ic_tormenta_qs" />-->
 
     <PreferenceScreen
        android:key="notification"
@@ -37,12 +37,12 @@
        android:summary="@string/notification_summary"
        android:icon="@drawable/ic_tormenta_notif"/>
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
        android:key="navigation"
        android:fragment="com.lluvia.tormenta.navigation.NavigationHolder"
        android:title="@string/navigation_title" 
        android:summary="@string/navigation_summary"
-       android:icon="@drawable/ic_tormenta_nav" />
+       android:icon="@drawable/ic_tormenta_nav" />-->
 
     <PreferenceScreen
        android:key="buttons"
@@ -58,12 +58,12 @@
        android:summary="@string/recent_summary"
        android:icon="@drawable/ic_tormenta_recents" />
 
-    <PreferenceScreen
+    <!-- <PreferenceScreen
        android:key="lockscreen"
        android:fragment="com.lluvia.tormenta.lockscreen.LockscreenHolder"
        android:title="@string/lockscreen_title" 
        android:summary="@string/lockscreen_summary"
-       android:icon="@drawable/ic_tormenta_lockscreen" />
+       android:icon="@drawable/ic_tormenta_lockscreen" />-->
 
     <PreferenceScreen
        android:key="gesture"
@@ -72,11 +72,11 @@
        android:summary="@string/gesture_summary"
        android:icon="@drawable/ic_tormenta_gesture" />
 
-    <PreferenceScreen
+    <!--<PreferenceScreen
        android:key="advanced"
        android:fragment="com.lluvia.tormenta.advanced.AdvancedHolder"
        android:title="@string/advanced_title" 
        android:summary="@string/advanced_summary"
-       android:icon="@drawable/ic_tormenta_advanced" />
+       android:icon="@drawable/ic_tormenta_advanced" />-->
 
 </PreferenceScreen>

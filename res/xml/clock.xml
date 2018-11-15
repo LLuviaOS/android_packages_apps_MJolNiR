@@ -21,5 +21,11 @@
     android:layout="@layout/tab_ui"
     android:title="@string/clock_category" >
 
+    <Preference
+            android:key="clock_settings"
+            android:title="@string/status_bar_clock"
+            android:summary="@string/status_bar_clock_summary"
+            android:fragment="com.lluvia.tormenta.statusbar.ClockDateSettings" />
+
 </PreferenceScreen>
 

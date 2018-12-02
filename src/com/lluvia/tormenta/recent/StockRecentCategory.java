@@ -29,6 +29,8 @@ import android.provider.Settings;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
+import com.android.internal.util.lluvia.LLuviaUtils;
 
 public class StockRecentCategory extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -36,6 +38,8 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
     private ListPreference mRecentsClearAllLocation;
+    private ListPreference mRecentsComponentType;
+    private static final String RECENTS_COMPONENT_TYPE = "recents_component";
 
     @Override
     public int getMetricsCategory() {
@@ -58,6 +62,14 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements
         mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
         mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
+        // recents component type
+        mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
+        int type = Settings.System.getInt(resolver,
+                Settings.System.RECENTS_COMPONENT, 0);
+        mRecentsComponentType.setValue(String.valueOf(type));
+        mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
+        mRecentsComponentType.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -74,6 +86,19 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
+        }
+        if (preference == mRecentsComponentType) {
+            int type = Integer.valueOf((String) newValue);
+            int index = mRecentsComponentType.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_COMPONENT, type);
+            mRecentsComponentType.setSummary(mRecentsComponentType.getEntries()[index]);
+            if (type == 1) { // Disable swipe up gesture, if oreo type selected
+               Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
+            }
+            LLuviaUtils.showSystemUiRestartDialog(getContext());
+        return true;
         }
         return false;
     }

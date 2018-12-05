@@ -242,6 +242,7 @@
     <string name="recents_pie">Pie</string>
     <string name="recents_oreo">Oreo</string>
 
+<<<<<<< HEAD
     <!-- Pulse config -->
     <string name="pulse_length_always_on">Always on</string>
     <string name="pulse_length_very_short">Very short</string>
@@ -288,6 +289,11 @@
     <string name="pulse_custom_div">Bar spacing</string>
     <string name="pulse_filled_block_size">Block size</string>
     <string name="pulse_empty_block_size">Block spacing</string>
+=======
+    <!-- QuickSettings Panel Transparency -->
+    <string name="qs_panel_alpha_title">Opacity</string>
+    <string name="qs_opacity_category">QS panel opacity</string>
+>>>>>>> 61d3854... Quick settings panel : Set transparency [2/2]
 
 </resources>
 

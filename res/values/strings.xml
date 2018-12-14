@@ -81,7 +81,7 @@
     <!--Tormenta navigation-->
     <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">Customize navigation bar style and behavior</string>
-    <string name="navigationbuttons_category">Layouts</string>
+    <string name="navigationbuttons_category">Navigations</string>
     <string name="navigation_category">Navigation</string>
 
     <!--Tormenta buttons-->

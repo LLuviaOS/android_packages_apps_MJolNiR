@@ -21,11 +21,11 @@
     android:layout="@layout/tab_ui"
     android:title="@string/navigationbuttons_category" >
 
-    <com.lluvia.tormenta.preferences.SystemSettingSwitchPreference
-            android:key="one_hand_mode_enabled"
-            android:title="@string/one_hand_mode_title"
-            android:summary="@string/one_hand_mode_summary"
-            android:dependency="navbar_visibility"
-            android:defaultValue="false" />
+    <!-- Smart Nav Bar -->
+    <Preference
+        android:key="navigationbar_settings"
+        android:title="@string/navigationbar_settings_title"
+        android:summary="@string/navigationbar_settings_summary"
+        android:fragment="com.android.settings.smartnav.NavigationBarSettings" />
 </PreferenceScreen>
 

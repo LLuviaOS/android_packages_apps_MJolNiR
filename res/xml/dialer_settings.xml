@@ -22,13 +22,13 @@
             android:title="@string/flash_on_call_category"
 	    android:dependency="advanced" 
 
-            <com.lluvia.tormenta.preferences.SystemSettingSwitchPreference
+            <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
                 android:key="flash_on_call_waiting"
                 android:title="@string/flash_on_call_title"
                 android:defaultValue="false"
 		android:fragment="com.lluvia.tormenta.advanced.AdvancedHolder" />
              
-            <com.lluvia.tormenta.preferences.CustomSeekBarPreference
+            <com.lluvia.tormenta.preference.CustomSeekBarPreference
                 android:key="flash_on_call_waiting_delay"
                 android:max="1000"
                 android:persistent="false"

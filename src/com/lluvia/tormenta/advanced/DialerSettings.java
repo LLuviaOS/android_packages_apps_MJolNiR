@@ -34,7 +34,7 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.lluvia.tormenta.preferences.CustomSeekBarPreference;
+import com.lluvia.tormenta.preference.CustomSeekBarPreference;
 import com.lluvia.tormenta.utils.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;

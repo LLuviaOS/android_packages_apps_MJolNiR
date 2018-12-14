@@ -72,11 +72,11 @@
        android:summary="@string/gesture_summary"
        android:icon="@drawable/ic_tormenta_gesture" />
 
-    <!--<PreferenceScreen
+    <PreferenceScreen
        android:key="advanced"
        android:fragment="com.lluvia.tormenta.advanced.AdvancedHolder"
        android:title="@string/advanced_title" 
        android:summary="@string/advanced_summary"
-       android:icon="@drawable/ic_tormenta_advanced" />-->
+       android:icon="@drawable/ic_tormenta_advanced" />
 
 </PreferenceScreen>

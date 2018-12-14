@@ -250,5 +250,9 @@
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
+
+    <string name="flash_on_call_category">Pulse flash</string>
+    <string name="flash_on_call_title">Pulse flash on incoming call</string>
+    <string name="flash_on_call_delay_title">Flash pulse rate</string>
 </resources>
 

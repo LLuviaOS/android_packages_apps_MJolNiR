@@ -84,6 +84,7 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new DialerSettings();
+            frags[1] = new SystemCategory();
         }
 
         @Override
@@ -105,7 +106,8 @@ public class AdvancedHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.dialer_title)};
+                    getString(R.string.dialer_title),
+		    getString(R.string.system_category)};
         return titleString;
     }
 }

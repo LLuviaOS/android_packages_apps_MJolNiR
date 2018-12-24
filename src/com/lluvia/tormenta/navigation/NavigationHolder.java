@@ -30,8 +30,8 @@ import android.view.ViewGroup;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.lluvia.tormenta.navigation.NavigationSettings;
 
-import com.lluvia.tormenta.navigation.PulseSettings;
 import com.lluvia.tormenta.PagerSlidingTabStrip;
 
 public class NavigationHolder extends SettingsPreferenceFragment {

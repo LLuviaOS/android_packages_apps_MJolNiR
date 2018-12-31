@@ -19,14 +19,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:layout="@layout/tab_ui"
-    android:title="@string/navigation_category" >
+    android:title="@string/navigationbuttons_category" >
 
-    <PreferenceScreen
-        android:key="pulse_settings"
-        android:title="@string/pulse_settings"
-        android:summary="@string/pulse_settings_summary"
-        android:dependency="navigation_bar_show"
-        android:fragment="com.lluvia.tormenta.navigation.PulseSettings" />
-
+    <!-- Smart Nav Bar -->
+    <Preference
+        android:key="navigationbar_settings"
+        android:title="@string/navigationbar_settings_title"
+        android:summary="@string/navigationbar_settings_summary"
+        android:fragment="com.android.settings.smartnav.NavigationBarSettings" />
 </PreferenceScreen>
 

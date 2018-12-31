@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lluvia.tormenta.navigation;
+package com.lluvia.tormenta.advanced;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -30,11 +30,11 @@ import android.view.ViewGroup;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.lluvia.tormenta.navigation.NavigationSettings;
 
+import com.lluvia.tormenta.advanced.SystemCategory;
 import com.lluvia.tormenta.PagerSlidingTabStrip;
 
-public class NavigationHolder extends SettingsPreferenceFragment {
+public class AdvancedHolder extends SettingsPreferenceFragment {
 
     ViewPager mViewPager;
     String titleString[];
@@ -83,7 +83,7 @@ public class NavigationHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new NavigationSettings();
+            frags[0] = new SystemCategory();
         }
 
         @Override
@@ -105,7 +105,7 @@ public class NavigationHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.navigationbuttons_category)};
+		    getString(R.string.system_category)};
         return titleString;
     }
 }

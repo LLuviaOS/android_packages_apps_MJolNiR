@@ -35,6 +35,7 @@ import com.lluvia.tormenta.statusbar.BatteryCategory;
 import com.lluvia.tormenta.statusbar.ClockCategory;
 import com.lluvia.tormenta.statusbar.IconsCategory;
 import com.lluvia.tormenta.statusbar.TrafficCategory;
+import com.lluvia.tormenta.statusbar.CutoutFragment;
 import com.lluvia.tormenta.PagerSlidingTabStrip;
 
 public class StatusbarHolder extends SettingsPreferenceFragment {

@@ -28,4 +28,9 @@
                 android:targetClass="com.android.systemui.tuner.NavBarActivity" />
     </Preference>
 
+    <com.lluvia.tormenta.preference.CardviewPreference
+            android:key="gesture_settings"
+            android:icon="@drawable/ic_settings_gestures_omni"
+            android:title="@string/gesture_settings_title"
+            android:fragment="com.lluvia.tormenta.gesture.GestureSettings" />
 </PreferenceScreen>

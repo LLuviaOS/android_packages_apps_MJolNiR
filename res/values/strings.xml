@@ -284,4 +284,10 @@
     <string name="audio_panel_view_position_title">Volume panel on left</string>
     <string name="audio_panel_view_position_summary">Show the volume panel dialog on the left hand side of your screen.</string>
     <string name="audio_panel_view_timeout_title">Volume panel timeout</string>
+
+    <!-- OP like nav gesture -->
+    <string name="gesture_settings_title">Gestures</string>
+    <string name="gesture_settings_info">Navigation bar must be disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
+    <string name="use_bottom_gesture_title">Navigation gestures</string>
+    <string name="use_bottom_gesture_summary">Use bottom swipe up gestures for navigation</string>
 </resources>

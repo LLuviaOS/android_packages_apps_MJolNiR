@@ -35,10 +35,10 @@
         android:entryValues="@array/recents_component_type_title_values"
         android:dependency="recents_ui_aosp_recents_category" />
 
-    <Preference
-        android:key="recents_icon_pack"
-        android:title="@string/recents_icon_pack_title"
-        android:summary="@string/recents_icon_pack_summary" />
+    <com.lluvia.tormenta.preference.RecentsIconPackPreference
+            android:key="recents_icon_pack"
+            android:title="@string/recents_icon_pack_title"
+            android:summary="@string/recents_icon_pack_summary" />
 
     </PreferenceCategory>
 

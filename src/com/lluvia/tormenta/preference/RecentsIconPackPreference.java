@@ -20,6 +20,7 @@ import android.content.Context;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import com.lluvia.tormenta.preference.IconPackPreference;
+import com.android.settings.R;
 
 public class RecentsIconPackPreference extends IconPackPreference {
 
@@ -29,6 +30,7 @@ public class RecentsIconPackPreference extends IconPackPreference {
 
     public RecentsIconPackPreference(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
+        setLayoutResource(R.layout.recents_iconpack_preference);
     }
 
     public RecentsIconPackPreference(Context context, AttributeSet attrs, int defStyleAttr) {

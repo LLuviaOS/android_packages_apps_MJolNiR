@@ -39,4 +39,13 @@
 	android:entryValues="@array/volume_key_cursor_control_values"
 	android:key="volume_key_cursor_control"
 	android:title="@string/volume_key_cursor_control_title" />
+
+    <!-- Audio Panel view  -->
+    <PreferenceScreen
+        android:key="volume_panel"
+        android:icon="@drawable/ic_tune"
+        android:title="@string/audio_panel_view_title"
+        android:summary="@string/audio_panel_view_summary"
+        android:fragment="com.lluvia.tormenta.buttons.VolumePanel" />
+
 </PreferenceScreen>

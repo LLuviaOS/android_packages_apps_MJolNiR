@@ -32,12 +32,14 @@
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_media"
         android:title="@string/audio_panel_view_media_title"
+        android:summary="@string/audio_panel_view_media_title_summary"
         android:defaultValue="false" />
 
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_ringer"
         android:title="@string/audio_panel_view_ringer_title"
-        android:defaultValue="false"/>
+        android:summary="@string/audio_panel_view_ringer_title_summary"
+        android:defaultValue="false" />
 
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_notification"
@@ -47,15 +49,18 @@
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_alarm"
         android:title="@string/audio_panel_view_alarm_title"
+        android:summary="@string/audio_panel_view_alarm_title_summary"
         android:defaultValue="false"/>
 
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_voice"
         android:title="@string/audio_panel_view_voice_title"
+        android:summary="@string/audio_panel_view_voice_title_summary"
         android:defaultValue="false"/>
 
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_bt_sco"
         android:title="@string/audio_panel_view_bt_sco_title"
+        android:summary="@string/audio_panel_view_bt_sco_title_summary"
         android:defaultValue="false"/>
 </PreferenceScreen>

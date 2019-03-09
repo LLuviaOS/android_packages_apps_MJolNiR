@@ -30,13 +30,7 @@
         settings:interval="1" />
 
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_media"
-        android:title="@string/audio_panel_view_media_title"
-        android:summary="@string/audio_panel_view_media_title_summary"
-        android:defaultValue="false" />
-
-    <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_ringer"
+        android:key="volume_keys_control_ring_tone"
         android:title="@string/audio_panel_view_ringer_title"
         android:summary="@string/audio_panel_view_ringer_title_summary"
         android:defaultValue="false" />

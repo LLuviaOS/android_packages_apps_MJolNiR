@@ -33,7 +33,6 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.lluvia.tormenta.buttons.PowermenuCategory;
 import com.lluvia.tormenta.buttons.VolumeCategory;
-import com.lluvia.tormenta.buttons.VolumePanel;
 import com.lluvia.tormenta.PagerSlidingTabStrip;
 
 public class ButtonsHolder extends SettingsPreferenceFragment {
@@ -88,7 +87,6 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
             frags[0] = new PowermenuCategory();
             frags[1] = new VolumeCategory();
 	    frags[2] = new ButtonSettings();
-            frags[3] = new VolumePanel();
         }
 
         @Override
@@ -113,7 +111,6 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
                     getString(R.string.powermenu_category),
                     getString(R.string.volume_category),
 		    getString(R.string.hardware_keys_category)};
-                    getString(R.string.volume_panel)};
         return titleString;
     }
 }

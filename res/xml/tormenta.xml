@@ -58,12 +58,12 @@
        android:summary="@string/recent_summary"
        android:icon="@drawable/ic_tormenta_recents" />
 
-    <!-- <PreferenceScreen
+    <PreferenceScreen
        android:key="lockscreen"
        android:fragment="com.lluvia.tormenta.lockscreen.LockscreenHolder"
        android:title="@string/lockscreen_title" 
        android:summary="@string/lockscreen_summary"
-       android:icon="@drawable/ic_tormenta_lockscreen" />-->
+       android:icon="@drawable/ic_tormenta_lockscreen" />
 
     <PreferenceScreen
        android:key="gesture"

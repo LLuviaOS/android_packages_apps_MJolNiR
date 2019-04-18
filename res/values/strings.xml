@@ -117,6 +117,7 @@
     <!--Tormenta lockscreen-->
     <string name="lockscreen_title">Lockscreen</string>
     <string name="lockscreen_summary">Customize lockscreen layout and options</string>
+    <string name="hide_lockscreen_items_title">Lockscreen items</string>
     <string name="weather_category">Weather</string>
     <string name="options_category">Various</string>
 
@@ -313,4 +314,9 @@
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
     <string name="default_iconpack_title">Default icons</string>
 
+    <!-- Lockscreen items -->
+    <string name="lockscreen_clock_title">Clock widget</string>
+    <string name="lockscreen_clock_summary">Show the clock widget on the lockscreen</string>
+    <string name="lockscreen_info_title">Items underneath the clock</string>
+    <string name="lockscreen_info_summary">Show the date, weather, alarms and zen on the lockscreen</string>
 </resources>

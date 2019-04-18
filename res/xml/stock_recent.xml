@@ -21,6 +21,27 @@
     android:layout="@layout/tab_ui"
     android:title="@string/stock_recent" >
 
+    <PreferenceCategory
+         android:key="recents_ui_aosp_recents_category"
+         android:title="@string/recent_title"
+         android:fragment="com.lluvia.tormenta.recent.StockRecentCategory" >
+
+    <ListPreference
+        android:key="recents_component"
+        android:title="@string/recents_component_type_title"
+        android:dialogTitle="@string/recents_component_type_title"
+        android:entries="@array/recents_component_type_title_entries"
+        android:defaultValue="1"
+        android:entryValues="@array/recents_component_type_title_values"
+        android:dependency="recents_ui_aosp_recents_category" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+         android:key="recents_ui_oreo_recents_category"
+         android:title="@string/oreo_recents_category">
+
     <com.lluvia.tormenta.preference.SystemSettingSwitchPreference
          android:key="systemui_recents_mem_display"
          android:title="@string/recents_show_membar_title"
@@ -41,20 +62,6 @@
         android:entryValues="@array/recents_clear_all_location_values"
         android:defaultValue="3"
         android:dependency="show_clear_all_recents" />
-
-    <PreferenceCategory
-         android:key="recents_ui_aosp_recents_category"
-         android:title="@string/recent_title"
-	 android:fragment="com.lluvia.tormenta.recent.StockRecentCategory" >
-
-    <ListPreference
-        android:key="recents_component"
-        android:title="@string/recents_component_type_title"
-        android:dialogTitle="@string/recents_component_type_title"
-        android:entries="@array/recents_component_type_title_entries"
-        android:defaultValue="1"
-        android:entryValues="@array/recents_component_type_title_values"
-	android:dependency="recents_ui_aosp_recents_category" />
 
     </PreferenceCategory>
 

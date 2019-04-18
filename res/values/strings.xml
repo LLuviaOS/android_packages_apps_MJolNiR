@@ -98,6 +98,7 @@
 
     <!-- Clear all recents -->
     <string name="aosp_recents_title">AOSP recents</string>
+    <string name="oreo_recents_category">Oreo recents</string>
     <string name="show_clear_all_recents_button_title">Clear-all FAB</string>
     <string name="show_clear_all_recents_button_summary_on">Show clear all FAB</string>
     <string name="show_clear_all_recents_button_summary_off">Show AOSP clear all</string>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lluvia.tormenta.gesture;
+package com.lluvia.tormenta.lockscreen;
 
 import android.app.ActivityManagerNative;
 import android.content.Context;
@@ -48,6 +48,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.lluvia.tormenta.preference.CustomSeekBarPreference;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 import android.provider.Settings;
 

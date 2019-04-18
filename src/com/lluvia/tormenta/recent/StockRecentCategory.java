@@ -39,7 +39,7 @@ import android.view.WindowManagerGlobal;
 import android.view.IWindowManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.aospextended.extensions.preference.IconPackPreference;
+import com.lluvia.tormenta.preference.IconPackPreference;
 
 import java.util.Locale;
 import android.text.TextUtils;
@@ -48,6 +48,8 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.internal.util.lluvia.LLuviaUtils;
 
 import java.util.ArrayList;
@@ -139,8 +141,8 @@ public class StockRecentCategory extends SettingsPreferenceFragment implements O
             LLuviaUtils.showSystemUiRestartDialog(getContext());
         return true;
         } else if (preference == mRecentsType) {
-            int style = Integer.valueOf((String) objValue);
-            int index = mRecentsType.findIndexOfValue((String) objValue);
+            int style = Integer.valueOf((String) newValue);
+            int index = mRecentsType.findIndexOfValue((String) newValue);
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.RECENTS_LAYOUT_STYLE, style, UserHandle.USER_CURRENT);
             mRecentsType.setSummary(mRecentsType.getEntries()[index]);

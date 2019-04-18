@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.aospextended.extensions.fragments;
+package com.lluvia.tormenta.gesture;
 
 import com.android.settings.SettingsPreferenceFragment;
 

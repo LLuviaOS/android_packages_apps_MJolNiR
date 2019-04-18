@@ -31,6 +31,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.lluvia.tormenta.lockscreen.LockscreenCategory;
+import com.lluvia.tormenta.PagerSlidingTabStrip;
 
 public class LockscreenHolder extends SettingsPreferenceFragment {
 
